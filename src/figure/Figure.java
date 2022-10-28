@@ -1,10 +1,13 @@
 package figure;
 
+import java.io.Serializable;
+
 import observable.DefaultSettings;
 import observable.Observable;
 import observable.Observer;
 
-public abstract class Figure implements Observer{
+public abstract class Figure implements Observer,Serializable{
+	private static final long serialVersionUID = 1L;
 	public double epaisseurContour;
 	public String couleurContour;
 	public String couleurRemplissage;

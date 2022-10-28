@@ -1,11 +1,18 @@
 package figure;
 
-import observable.Observable;
+import java.io.Serializable;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure implements Serializable{
 	private Point coin;
 	private double l;
 	private double h;
+	
+	public Rectangle(Point coin, double l, double h) {
+		super();
+		this.coin = coin;
+		this.l = l;
+		this.h = h;
+	}
 
 	@Override
 	public double perimetre() {

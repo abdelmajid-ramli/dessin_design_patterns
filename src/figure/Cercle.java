@@ -1,10 +1,15 @@
 package figure;
 
-import observable.Observable;
+import java.io.Serializable;
 
-public class Cercle extends Figure{
+public class Cercle extends Figure implements Serializable{
 	private Point centre;
 	private double rayon;
+	
+	public Cercle(Point centre,double rayon) {
+		this.centre=centre;
+		this.rayon=rayon;
+	}
 
 	@Override
 	public double perimetre() {

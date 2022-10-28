@@ -14,6 +14,7 @@ public class DefaultSettings implements Observable{
 	@Override
 	public void add(Observer observer) {
 		this.observers.add(observer);
+		observer.update(this);
 	}
 
 	@Override
